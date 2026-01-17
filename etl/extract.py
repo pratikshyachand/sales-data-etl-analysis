@@ -1,4 +1,4 @@
 import pandas as pd
 
-def extract_customers(path):
+def extract_data(path):
     return pd.read_csv(path)
