@@ -1,30 +1,24 @@
 import pandas as pd
 
-def TransformCustomers(df):
-    df = df[['CustomerID', 'FirstName', 'LastName', 'Country']]
+def TransformCustomers(df_raw):
+
+   df = df_raw[['CustomerID', 'FirstName', 'LastName', 'Country']].copy()
+
+   # the commented out below lines of code is for understanding dataset before cleaning/conversion
+   '''print(df.head(10)) #returns top 10 rows
+   df.info()  # returns structure of dataset
+   print(df.isnull().sum()) #calulates total nulls in a column
+   print(df.isna().sum())  #calculates total N/A in a column
+   print(df.duplicated(subset="CustomerID").sum()) #calulates total duplicate values in CustomerID'''
     
-    # Check for duplicates
-    df = df.drop_duplicates(subset=["CustomerID"])
+   for col in ['FirstName', 'LastName', 'Country']:
+       df[col] = df[col].str.strip().str.title()
 
-    # Check for missing values
-    df = df.dropna(subset=["CustomerID"])
-    df["FirstName"] = df["FirstName"].fillna( "Unknown")
-    df["LastName"] = df["LastName"].fillna("Unknown")
-    df["Country"] = df["Country"].fillna("Unknown")
+#    print(df.head(10))
+#    df.info()
 
-    # Handle invalid data types
-    df["CustomerID"] = df["CustomerID"].astype(str)
-    df["FirstName"] = df["FirstName"].astype(str)
-    df["LastName"] = df["LastName"].astype(str)
-    df["Country"] = df["Country"].astype(str)
+   return df
 
-
-
-    # Standardize text formats
-    df["FirstName"] = df["FirstName"].str.strip().str.title()
-    df["LastName"] = df["LastName"].str.strip().str.title()
-    df["Country"] = df["Country"].str.strip().str.title()
-
-    return df
+    
 
 
