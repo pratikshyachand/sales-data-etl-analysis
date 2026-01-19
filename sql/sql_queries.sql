@@ -64,7 +64,7 @@ FROM sales
 GROUP BY FORMAT(OrderDate, 'yyyy-MM')
 ORDER BY YearMonth;
 
--- 7. Product, Sales, Quantity VS Revenue
+-- 7. Quantity VS Revenue by Product
 
 SELECT
 DISTINCT p.Name,
