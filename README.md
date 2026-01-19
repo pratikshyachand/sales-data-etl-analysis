@@ -111,7 +111,7 @@ Source: Kaggle (Retail Sales Dataset)
   - Open analysis/analysis_visualization.ipynb in VS Code
   - Select the correct Python Kernel
   - Run cells sequentially to generate analysis and visualization
- 
+ ---
 🤝 **Contributing**
 
 This project is for learning purposes.
