@@ -1,6 +1,6 @@
 ## 📊 Sales Data ETL, Analysis and Visualization
 
-An end-to-end data analytics project demonstrating a complete workflow from raw CSV files --> ETL --> SQL database --> Analysis --> Visualization
+A beginner-friendly data analytics project demonstrating a complete workflow from raw CSV files --> ETL --> SQL database --> Analysis --> Visualization
 
 The objective of this project is to practice **data engineering fundamentals**  and **data analysis using SQL + Python**.
 
