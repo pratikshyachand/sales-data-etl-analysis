@@ -6,7 +6,7 @@ The objective of this project is to practice **data engineering fundamentals**  
 
 ## 📌 Project Overview
 
-1. Extracted from CSV files
+1. Loaded CSV files
 2. Built an **ETL pipeline** using Python
 3. Loaded cleaned data into a **SQL Server database**
 4. Analyzed data using **SQL and pandas**
